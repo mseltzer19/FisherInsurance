@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
+[Route("customer")]
+
 public class CustomerCareController : Controller
 {
     public IActionResult Index()
@@ -10,5 +12,12 @@ public class CustomerCareController : Controller
     public IActionResult Claims()
     {
         return Ok("This is the claims of the CustomerCareController");
+    }
+
+  [Route("claim/fileclaim")]
+    public IActionResult NewClaim()
+    {
+      
+        return Ok("This is the new claims of the CustomerCareController");
     }
 }
