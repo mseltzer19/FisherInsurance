@@ -20,7 +20,7 @@ public class CustomerCareController : Controller
         return Ok("This is the new claims of the CustomerCareController");
     }
 
-    [Route("myclaims")]
+    [Route("claimstatus")]
 
     public IActionResult ClaimHistory()
     {
