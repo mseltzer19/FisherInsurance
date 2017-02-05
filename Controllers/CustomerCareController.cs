@@ -14,10 +14,16 @@ public class CustomerCareController : Controller
         return Ok("This is the claims of the CustomerCareController");
     }
 
-  [Route("claim/fileclaim")]
+  [Route("fileclaim")]
     public IActionResult NewClaim()
     {
-      
         return Ok("This is the new claims of the CustomerCareController");
+    }
+
+    [Route("myclaims")]
+
+    public IActionResult ClaimHistory()
+    {
+        return Ok("This is the history of claims of the CustomerCareController");
     }
 }
