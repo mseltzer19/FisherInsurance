@@ -1,5 +1,6 @@
+using System;
+using FisherInsurance.Models;
 using Microsoft.AspNetCore.Mvc;
-
 public class AutoController : Controller
 {
     public IActionResult Index()
@@ -10,6 +11,14 @@ public class AutoController : Controller
 
     public IActionResult Quote()
     {
-        return Ok("This is the quote of the AutoController");
+        Quote quote = new Quote 
+ { 
+            Id = 345, 
+            Product = "Auto Insurance", 
+            ExpireDate = DateTime.Now.AddDays(45), 
+            Price = 45.00M 
+        }; 
+ 
+        return View(quote);
     }
 }
